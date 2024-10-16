@@ -20,4 +20,11 @@ Se puede encontrar en el siguiente enlace. https://ai.google.dev/gemini-api/docs
     - Añadir nueva variable de entorno bajo *Variables de usuario para Usuario* con variable **GEMINI_API_KEY** y valor el de la clave API que nos acabamos de crear
 
     ![Alt text](images/image003.png) 
+5. Modificar línea 113 del **archivo docm_castilla_la_mancha.py** para que apunte al driver instalado anteriormente
 
+
+## Errores comunes 
+- `[Errno 13] Permission denied: 'documentos.xlsx'`. Se debe a que el sistema está intentando escribir un archivo que está abierto. 
+Solución: cerrar el excel *documentos* y volver a lanzar el programa. 
+- Geckodriver no concuerda con la versión de Mozilla instalada. 
+Solución: actualizar Mozilla hasta la versión soportada por el driver
