@@ -10,9 +10,14 @@ Seleccionar la versión para windows con arquitectura de 64 bits: geckdriver-vX.
 Se puede encontrar en el siguiente enlace. https://ai.google.dev/gemini-api/docs/api-key?hl=es-419
 4. Añadir clave API como variable de entorno 
     - Entrar en **Editar las variables de entorno del sistema**
+
     ![Alt text](images/image001.png) 
+
     - Hacer click en **Variables de entorno ...**
+
     ![Alt text](images/image002.png) 
+
     - Añadir nueva variable de entorno bajo Variables de usuario para Usuario con variable **GEMINI_API_KEY** y valor el que la clave API que nos acabamos de crear
+    
     ![Alt text](images/image003.png) 
 
