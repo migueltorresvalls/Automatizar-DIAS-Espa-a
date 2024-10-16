@@ -27,7 +27,11 @@ class Main:
 
     # Crea driver de selnium
     def genera_driver(self, options=Options()):
-        driver = webdriver.Chrome(options=options)
+        # Descomentar siguiente linea si vamos a usar Chrome
+        # driver = webdriver.Chrome(options=options)
+
+        # Comentar si vaoms a usar Chrome
+        driver = webdriver.Firefox(options=options)
 
         return driver
             
@@ -73,8 +77,8 @@ class Main:
             filas_impar = self.driver.find_elements(by=By.CLASS_NAME, value="filaImpar")
             
             # Hay 50 documentos (25 filas par, 25 filas impar) por página
-            self.comprobar_nuevos_documentos(filas_par[0:7])
-            self.comprobar_nuevos_documentos(filas_impar[0:7])
+            self.comprobar_nuevos_documentos(filas_par[14:21])
+            self.comprobar_nuevos_documentos(filas_impar[14:21])
 
             pagina_actual += 1
             self.cambiar_pagina(pagina_actual)
@@ -98,12 +102,17 @@ class Main:
         self.gemini = Gemini()
 
         # Cargo driver
-        options = Options()
+        # Descomentar siguiente linea si vamos a usar Chrome
+        # options = webdriver.ChromeOptions()
+
+        # Comentar si vamos a usar Chrome
+        options = webdriver.FirefoxOptions()
+
         # Si queremos que muestre interfaz gráfica del navegador, comentar siguiente linea
         options.add_argument("--headless")
+        options.binary_location = ruta al ejecutable geckodriver instalado
 
         self.driver = self.genera_driver(options)
-        # driver = genera_driver()
 
         # Lanzo selenium
         pagina_comienzo = 1
