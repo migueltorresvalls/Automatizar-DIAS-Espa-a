@@ -2,7 +2,7 @@
 
 ## Guía de instalación 
 1. Instalar dependencias 
-`pip install -r docm_cca/dependiex.txt`
+`pip install -r docm_cca/dependencies.txt`
 2. Instalar driver de Mozzilla. 
 Se encuentra en `https://github.com/mozilla/geckodriver/releases/tag/v0.35.0`. 
 Seleccionar la versión para windows con arquitectura de 64 bits: geckdriver-vX.XX.X-win64.zip
